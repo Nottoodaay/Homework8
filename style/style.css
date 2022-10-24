@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url(../img/bg.png);
+    height: 100%;   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+header .fa-bars-icon{
+    width: 100%;
+    text-align: right;
+    font-size: 24px;
+    display: none;
+}
+
+
+header ul{
+    width: 594px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 270px auto auto; 
+}
+
+.first{
+    height: 70px;
+    width: 228px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(121, 179, 49, 1);
+    border-radius: 0px 36px 0px 36px;
+}
+
+.second{
+    height: 70px;
+    width: 126px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 0px 36px 0px 36px;
+}
+
+.third{
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 0px 36px 0px 36px;
+}
+
+header li a{
+    color: black;
+    padding: 23px 26px;
+}
+
+.first a{
+    color: white;
+}
+
+.second:hover a, .third:hover a{
+    color: white;
+}
+
+.second:hover, .third:hover{
+    background-color: rgba(121, 179, 49, 1);
+}
+
+
+.action{
+    width: 420px;
+    height: 188px;
+    margin: 94px 220px auto auto;
+    position: relative;
+}
+
+.ball{
+    width: 32px;
+    height: 32px;
+    background-color: rgba(121, 179, 49, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: move 4s infinite;
+}
+
+.action .p1{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 18px;
+}
+
+.time{
+    font-size:36px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+
+.tree{
+    width: 1060px;
+    height: 500px;
+    margin: 140px 42px auto auto;
+    position: relative;
+}
+
+
+.line{
+    height: 428px;
+    width: 1px;
+    background-color: rgba(196, 196, 196, 1);
+    position: absolute;
+    bottom: 0;
+    left: 530px;
+}
+
+.section{
+    width: 530px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section p{
+    width: 420px;
+    height: 48px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.leaf{
+    width: 70px;
+    height: 70px;
+    border-radius: 0px 36px 0px 36px;
+    background-color: rgba(196, 196, 196, 1);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.section2{
+    width: 530px;
+    height: 70px;
+    position: absolute;
+    top: 112px;
+    right: 0;
+}
+
+.section2 .leaf{
+    left: 0;
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.section2 p{
+    width: 420px;
+    height: 48px;
+    margin-left: 92px;
+    margin-top: 10px;
+}
+
+
+.section3{
+    width: 530px;
+    height: 70px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
+
+.section3 p{
+    width: 420px;
+    height: 48px;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.section4{
+    width: 530px;
+    height: 70px;
+    position: absolute;
+    top: 300px; 
+    right: 0;
+}
+
+.section4 .leaf{
+    left: 0;
+    top: 0%;
+    transform: rotate(90deg);
+}
+
+.section4 p{
+    width: 420px;
+    height: 48px;
+    margin-left: 92px;
+    margin-top: 10px;
+}
+
+.section:hover p, .section2:hover p,
+.section3:hover p, .section4:hover p{
+    color: rgba(121, 179, 49, 1);
+}
+
+.section:hover div, .section2:hover div,
+.section3:hover div,.section4:hover div{
+    background-color: rgba(121, 179, 49, 1);
+}
+
+
+@keyframes move{
+    0%{top: 0; left: 0;}
+    25%{top: 0; left: 388px;}
+    50%{top: 156px; left: 388px;}
+    75%{top: 156px; left: 0;}
+    100%{top: 0; left: 0;}
+}
+
+
+/* -----------------Ipad Pro----------- */
+
+@media only screen and (max-width:1024px) {
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    body{
+        background-position: -300px;
+        position: relative;
+    }
+
+    .action{
+        margin-right: 300px;
+    }
+
+    .tree{
+        width: 530px;
+        bottom: 0;
+        right: 300px;
+    }
+
+}
+
+/* ----------------iphone 11pro max----- */
+
+@media only screen and (max-width:414px) {
+    
+    header .fa-bars-icon{
+        display: block;
+    }
+
+    header{
+        display: flex;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
